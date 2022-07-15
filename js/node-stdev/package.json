@@ -1,0 +1,33 @@
+{
+  "name": "node-stdev",
+  "version": "1.0.1",
+  "description": "Small utility for calculating standard deviation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robscotts4rb/standard-deviation.git"
+  },
+  "keywords": [
+    "standard",
+    "deviation",
+    "math",
+    "maths",
+    "calculations"
+  ],
+  "author": "Rob Scott (rob.scott@s4rb.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robscotts4rb/standard-deviation/issues"
+  },
+  "homepage": "https://github.com/robscotts4rb/standard-deviation#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.2"
+  }
+}

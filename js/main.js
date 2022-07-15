@@ -1,6 +1,7 @@
 $(document).ready(function() { 
     const PSV = new TSV.TSV.Parser('\t');
     var champion_data;
+    var math = true;
     var teams = [
         {'top': {}, 'jg': {}, 'mid': {}, 'adc': {}, 'supp': {}},
         {'top': {}, 'jg': {}, 'mid': {}, 'adc': {}, 'supp': {}}
@@ -151,21 +152,25 @@ $(document).ready(function() {
             for (let team = 0 ; team < 2 ; team ++) {
                 for (let role of Object.keys(suggestions[team])) {
                     if(suggestions[team][role].length > i) {
+                        let color;
                         if (Object.values(teams[0]).filter((x) => x['Champion'] == suggestions[team][role][i][0]).length > 0 ||
                             Object.values(teams[1]).filter((x) => x['Champion'] == suggestions[team][role][i][0]).length > 0){
-                                html += `<td class="picked" onclick="placeChamp(this, '${team}', '${role}');">`;
+                            color = 'picked';
                         }
                         else {
-                            html += `<td onclick="placeChamp(this, '${team}', '${role}');">`;
+                            color = i < 5 ? 'open' : '';
                         }
+                        html += `<td colspan=${2-math} class="${color}" onclick="placeChamp(this, '${team}', '${role}');">`;
                         html += suggestions[team][role][i][0];
                         html += "</td>";
-                        html += "<td>";
+                        html += `<td class="${color}">`;
                         html += suggestions[team][role][i][2];
                         html += "</td>";
-                        html += "<td>";
-                        html += suggestions[team][role][i][1].toFixed(2);
-                        html += "</td>";
+                        if(math) {
+                            html += "<td>";
+                            html += suggestions[team][role][i][1].toFixed(2);
+                            html += "</td>";
+                        }
                     }
                     if(suggestions[team][role].length == i) {
                         html += `<td colspan='3' rowspan='${max_suggestions - suggestions[team][role].length}'></td>`;
@@ -342,6 +347,11 @@ $(document).ready(function() {
                             console.log(players, 'your_champ_data_filter:', your_champ_data_filter);
                             console.log(players, 'positions:', positions);
                     
+                            refresh();
+                        });
+
+                        $('#math').change(function() {
+                            math = this.checked;
                             refresh();
                         });
         
