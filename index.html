@@ -21,48 +21,92 @@
             border: none;
         }
 
+        table, table td, table th {
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+        }
+
         thead tr th {
             text-align: center;
+            color: white;
         }
 
         tbody tr th {
             text-align: right;
+            color: white;
         }
         
         tbody tr td {
             text-align: center;
+            color: white;
         }
 
         tbody tr td select {
             width: 100%;
         }
+
+        html {
+            background: url(./map.jpg);
+            background-repeat: repeat-y;
+            background-size: 100%;
+        }
+        
+        body {
+            background: rgba(0,0,0,0.75);
+            color: white;
+        }
+
+        .picked {
+            background-color: red !important;
+        }
+
+        #suggestions tr:nth-of-type(-n+5) {
+            background-color: green !important;
+        }
+
+
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-        <label for="team1">Your team data (.tsv)</label>
-        <input id="team1" type="file">
-        <label for="team2">Enemy team data (.tsv)</label>
-        <input id="team2" type="file">
+        <center style="font-size: 2em;">
+            <label for="team1">Your team data (.tsv)</label>
+            <input id="team1" type="file">
+            <label for="team2">Enemy team data (.tsv)</label>
+            <input id="team2" type="file">
+            <select id="comp_type">
+                <option val="Balance">Balance</option>
+                <option val="Ultimate3">Ultimate 3</option>
+                <option val="Base3">Base 3</option>
+                <option val="Ultimate2">Ultimate 2</option>
+                <option val="Base2">Base 2</option>
+                <option val="Base1">Base 1</option>
+                <option val="Attack">Attack</option>
+                <option val="Catch">Catch</option>
+                <option val="Protect">Protect</option>
+                <option val="Siege">Siege</option>
+                <option val="Split">Split</option>
+            </select>
+        </center>
     </div>
     <div class="container-fluid">
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="2" scope="col">Players</th>
-                    <th colspan="3" scope="col">Champion</th>
-                    <th colspan="3" scope="col"></th>
+                    <th colspan="2" scope="col" width="20%">Players</th>
+                    <th colspan="3" scope="col" width="30%">Champion</th>
+                    <th colspan="3" scope="col" width="30%">Scaling</th>
                 </tr>
                 <tr>
-                    <th scope="col">Your team</th>
-                    <th scope="col">Enemy team</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Your team</th>
-                    <th scope="col">Enemy team</th>
-                    <th scope="col">Early</th>
-                    <th scope="col">Mid</th>
-                    <th scope="col">Late</th>
+                    <th scope="col" width="10%">Your team</th>
+                    <th scope="col" width="10%">Enemy team</th>
+                    <th scope="col" width="10%">Position</th>
+                    <th scope="col" width="10%">Your team</th>
+                    <th scope="col" width="10%">Enemy team</th>
+                    <th scope="col" width="10%">Early</th>
+                    <th scope="col" width="10%">Mid</th>
+                    <th scope="col" width="10%">Late</th>
                 </tr>
             </thead>
             <tbody>
@@ -116,6 +160,39 @@
                     <td id='game_supp_diff_mid'></td>
                     <td id='game_supp_diff_late'></td>
                 </tr>
+                <tr>
+                    <th colspan="5">Total scaling diff</th>
+                    <td id='game_team_diff_early'></td>
+                    <td id='game_team_diff_mid'></td>
+                    <td id='game_team_diff_late'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="30" scope="col">Next pick</th>
+                </tr>
+                <tr>
+                    <th colspan="15" scope="col">Your team</th>
+                    <th colspan="15" scope="col">Enemy team</th>
+                </tr>
+                <tr>
+                    <th colspan="3">Top</th>
+                    <th colspan="3">Jungle</th>
+                    <th colspan="3">Mid</th>
+                    <th colspan="3">ADC</th>
+                    <th colspan="3">Support</th>
+                    <th colspan="3">Top</th>
+                    <th colspan="3">Jungle</th>
+                    <th colspan="3">Mid</th>
+                    <th colspan="3">ADC</th>
+                    <th colspan="3">Support</th>
+                </tr>
+            </thead>
+            <tbody id="suggestions">
             </tbody>
         </table>
     </div>
@@ -123,17 +200,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div class="modal-body">
                     <div class="spinner-border text-success" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -145,7 +215,9 @@
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
     <script src="./node_modules/tsv/index.js"></script>
-    <script src="main.js"></script>
+    <script src="./node_modules/jsdom/lib/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
