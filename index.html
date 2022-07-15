@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>LoL Drafting System</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -47,13 +48,14 @@
 
         html {
             background: url(./map.jpg);
-            background-repeat: repeat-y;
+            background-repeat: repeat;
             background-size: 100%;
         }
         
         body {
             background: rgba(0,0,0,0.75);
             color: white;
+            font-size: 0.9em;
         }
 
         .picked {
@@ -176,20 +178,20 @@
                     <th colspan="30" scope="col">Next pick</th>
                 </tr>
                 <tr>
-                    <th colspan="15" scope="col">Your team</th>
-                    <th colspan="15" scope="col">Enemy team</th>
+                    <th width="50%" colspan="15" scope="col">Your team</th>
+                    <th width="50%" colspan="15" scope="col">Enemy team</th>
                 </tr>
                 <tr>
-                    <th colspan="3">Top</th>
-                    <th colspan="3">Jungle</th>
-                    <th colspan="3">Mid</th>
-                    <th colspan="3">ADC</th>
-                    <th colspan="3">Support</th>
-                    <th colspan="3">Top</th>
-                    <th colspan="3">Jungle</th>
-                    <th colspan="3">Mid</th>
-                    <th colspan="3">ADC</th>
-                    <th colspan="3">Support</th>
+                    <th width="10%" colspan="3">Top</th>
+                    <th width="10%" colspan="3">Jungle</th>
+                    <th width="10%" colspan="3">Mid</th>
+                    <th width="10%" colspan="3">ADC</th>
+                    <th width="10%" colspan="3">Support</th>
+                    <th width="10%" colspan="3">Top</th>
+                    <th width="10%" colspan="3">Jungle</th>
+                    <th width="10%" colspan="3">Mid</th>
+                    <th width="10%" colspan="3">ADC</th>
+                    <th width="10%" colspan="3">Support</th>
                 </tr>
             </thead>
             <tbody id="suggestions">

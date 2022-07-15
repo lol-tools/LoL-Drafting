@@ -119,14 +119,14 @@ $(document).ready(function() {
                 const championName = a[0];
                 const maxCompScore = Math.max(...Object.values(a[1]));
                 const score = maxCompScore*a[2]/10;
-                const compType = Object.keys(a[1]).filter((comp) => a[1][comp] == maxCompScore).map((name) => name.slice('CompScore'.length)).join(',');
+                const compType = Object.keys(a[1]).filter((comp) => a[1][comp] == maxCompScore).map((name) => name.slice('CompScore'.length).split('+').join('/')).join('<br>');
                 return [championName, score, compType];
             });
             suggestions[1][role] = suggestions[1][role].map((a) => {
                 const championName = a[0];
                 const maxCompScore = Math.max(...Object.values(a[1]));
                 const score = maxCompScore*a[2]/10;
-                const compType = Object.keys(a[1]).filter((comp) => a[1][comp] == maxCompScore).map((name) => name.slice('CompScore'.length).split('+').join('/')).join(',');
+                const compType = Object.keys(a[1]).filter((comp) => a[1][comp] == maxCompScore).map((name) => name.slice('CompScore'.length).split('+').join('/')).join('<br>');
                 return [championName, score, compType];
             });
         }
