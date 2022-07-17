@@ -288,6 +288,8 @@ $(document).ready(function() {
                                     your_champ_data_filter[team][championName][role] = Math.pow(meta[team][longRole][championName], 2) * comfort[player][championName];
                                 }
                             });
+
+                            console.log(teams, 'your_champ_data_filter:', your_champ_data_filter);
                     
                             refresh();
                         });
@@ -344,7 +346,6 @@ $(document).ready(function() {
                             console.log(champion_data);
                             console.log(players, 'comfort:', comfort);
                             console.log(players, 'meta:', meta);
-                            console.log(players, 'your_champ_data_filter:', your_champ_data_filter);
                             console.log(players, 'positions:', positions);
                     
                             refresh();
