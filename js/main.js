@@ -2,6 +2,7 @@ $(document).ready(function() {
     const PSV = new TSV.TSV.Parser('\t');
     var champion_data;
     var math = true;
+    var compChart;
     var teams = [
         {'top': {}, 'jg': {}, 'mid': {}, 'adc': {}, 'supp': {}},
         {'top': {}, 'jg': {}, 'mid': {}, 'adc': {}, 'supp': {}}
@@ -10,12 +11,7 @@ $(document).ready(function() {
     var comfort = [], meta = [{'Top': {}, 'Jungle': {}, 'Mid': {}, 'ADC': {}, 'Support': {}}, {'Top': {}, 'Jungle': {}, 'Mid': {}, 'ADC': {}, 'Support': {}}];
     var your_champ_data_filter = [{}, {}];
 
-
-    function set_modal(state) {
-        $('.modal').modal(state);
-    }
-
-    function expandComps(comp) {
+    function expandComps(comp, type) {
         const standardDeviation = (array) => {
             const n = array.length - 1;
             const mean = array.reduce((a, b) => a + b) / array.length;
@@ -24,7 +20,8 @@ $(document).ready(function() {
         const prefix = 'CompScore';
         const compProperties = ['Attack', 'Catch', 'Protect', 'Siege', 'Split'];
         let scores = {};
-        const type = $('#comp_type').val();
+        if (type === undefined)
+            type = $('#comp_type').val();
         for (let i = 0 ; i < compProperties.length ; i += 1) {
             if (type == compProperties[i] || type == 'Base 1') {
                 scores[prefix + compProperties[i]] = comp[prefix + compProperties[i]];
@@ -68,9 +65,10 @@ $(document).ready(function() {
         return scores;
     }
 
-    function scoreChampionInComp(suggestion, _comp) {
+    function scoreChampionInComp(suggestion, _comp, type) {
         let comp = JSON.parse(JSON.stringify(_comp));
-        comp.push(suggestion);
+        if(suggestion !== undefined)
+            comp.push(suggestion);
         const compProperties = ['CompScoreAttack', 'CompScoreCatch', 'CompScoreProtect', 'CompScoreSiege', 'CompScoreSplit'];
         const init = compProperties.reduce((sum, comp) => {
             sum[comp] = 0;
@@ -88,7 +86,7 @@ $(document).ready(function() {
             }
             return sum;
         }, init);
-        return expandComps(data);
+        return expandComps(data, type);
     }
 
     function make_suggestions() {
@@ -182,8 +180,60 @@ $(document).ready(function() {
         elem.html(html);
     }
 
+    function show_analysis() {
+        const comp_team1 = Object.values(teams[0]).filter((x) => x['Champion'].length != 0);
+        const comp_team2 = Object.values(teams[1]).filter((x) => x['Champion'].length != 0);
+        const data1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1'));
+        const data2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1'));
+        const analysis_team1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1')).sort((a, b) => b[1] - a[1]);
+        const analysis_team2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1')).sort((a, b) => b[1] - a[1]);
+        if(compChart !== undefined) compChart.destroy();
+        compChart = new Chart(
+            document.getElementById('myChart'),
+            {
+                type: 'radar',
+                data: {
+                    labels: data1.map((x) => x[0].slice('CompScore'.length)),
+                    datasets: [{
+                      label: 'Your team',
+                      data: data1.map((x) => x[1]),
+                      fill: true,
+                      backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                      borderColor: 'rgb(54, 162, 235)',
+                      pointBackgroundColor: 'rgb(54, 162, 235)',
+                      pointBorderColor: '#fff',
+                      pointHoverBackgroundColor: '#fff',
+                      pointHoverBorderColor: 'rgb(54, 162, 235)'
+                    }, {
+                      label: 'Enemy team',
+                      data: data2.map((x) => x[1]),
+                      fill: true,
+                      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                      borderColor: 'rgb(255, 99, 132)',
+                      pointBackgroundColor: 'rgb(255, 99, 132)',
+                      pointBorderColor: '#fff',
+                      pointHoverBackgroundColor: '#fff',
+                      pointHoverBorderColor: 'rgb(255, 99, 132)'
+                    }],
+                },
+                options: chartOptions,
+                plugins: [chartBgPlugin]
+            }
+        );
+        console.log(analysis_team1, analysis_team2);
+        $('#analysis').html('');
+        for (let i = 0 ; i < 5 ; i += 1) {
+            $('#analysis').html($('#analysis').html() + `<tr>
+                <td>${i + 1}</td>
+                <td>${analysis_team1[i][0].slice('CompScore'.length)}</td>
+                <td>${analysis_team1[i][1]}</td>
+                <td>${analysis_team2[i][0].slice('CompScore'.length)}</td>
+                <td>${analysis_team2[i][1]}</td>
+            </tr>`)
+        }
+    }
+
     function refresh() {
-        set_modal('show');
         for (let role in teams[0]) {
             updateValue(`game_${role}_diff_early`, Math.round((teams[0][role]['WRScoreEarly'] - teams[1][role]['WRScoreEarly'])*100)/100, '');
             updateValue(`game_${role}_diff_mid`  , Math.round((teams[0][role]['WRScoreMid']   - teams[1][role]['WRScoreMid']  )*100)/100, '');
@@ -193,7 +243,7 @@ $(document).ready(function() {
         updateValue(`game_team_diff_mid`  , Math.round(Object.keys(teams[0]).map((role) => teams[0][role]['WRScoreMid']   - teams[1][role]['WRScoreMid']  ).reduce((sum, val) => sum + val, 0)*100)/100, '');
         updateValue(`game_team_diff_late` , Math.round(Object.keys(teams[0]).map((role) => teams[0][role]['WRScoreLate']  - teams[1][role]['WRScoreLate'] ).reduce((sum, val) => sum + val, 0)*100)/100, '');
         show_suggestions(make_suggestions());
-        set_modal('hide');
+        show_analysis();
     }    
     
     function init() {
@@ -201,7 +251,7 @@ $(document).ready(function() {
             url: "./data/champ_scores.tsv",
             type: "GET",
             beforeSend: function() {
-                set_modal('show');
+                $('.modal').show();
             },
             success: function (data) {
                 data = data.toString();
@@ -242,7 +292,7 @@ $(document).ready(function() {
                     url: "./data/champion_roles.tsv",
                     type: "GET",
                     beforeSend: function() {
-                        set_modal('show');
+                        $('.modal').show();
                     },
                     success: function (data) {
                         data = data.toString();
@@ -271,11 +321,15 @@ $(document).ready(function() {
                     },
                     complete: function (xhr, status) {
                         refresh();
+
                         $('#comp_type').change(function() {
+                            $('.modal').show();
                             refresh();
+                            $('.modal').hide();
                         });
                     
                         $('.select_player').change(function() {
+                            $('.modal').show();
                             const element = $(this);
                             const player = element.val();
                             const team = parseInt($(this).attr('id').slice(4, 5)) - 1;
@@ -288,22 +342,24 @@ $(document).ready(function() {
                                     your_champ_data_filter[team][championName][role] = Math.pow(meta[team][longRole][championName], 2) * comfort[player][championName];
                                 }
                             });
-
-                            console.log(teams, 'your_champ_data_filter:', your_champ_data_filter);
                     
                             refresh();
+                            $('.modal').hide();
                         });
                     
                         $('.select_champion').change(function() {
+                            $('.modal').show();
                             const element = $(this);
                             const champion = element.val();
                             const team = parseInt($(this).attr('id').slice(4, 5)) - 1;
                             const role = $(this).attr('id').slice(6, -('_champion'.length));
                             teams[team][role] = champion_data[champion];
                             refresh();
+                            $('.modal').hide();
                         });
                     
                         $('input[type=file]').change(async function(event) {
+                            $('.modal').show();
                             const teamId = $(this).attr('id');
                             const team = parseInt(teamId.slice(-1)) - 1;
                             const file = event.target.files.item(0)
@@ -346,17 +402,42 @@ $(document).ready(function() {
                             console.log(champion_data);
                             console.log(players, 'comfort:', comfort);
                             console.log(players, 'meta:', meta);
+                            console.log(players, 'your_champ_data_filter:', your_champ_data_filter);
                             console.log(players, 'positions:', positions);
                     
                             refresh();
+                            $('.modal').hide();
                         });
 
                         $('#math').change(function() {
+                            $('.modal').show();
                             math = this.checked;
                             refresh();
+                            $('.modal').hide();
                         });
-        
-                        set_modal('hide');        
+
+                        $('#reset').click(function() {
+                            $('.modal').show();
+
+                            $(".select_champion").prop('selectedIndex',0);
+                            $(".select_champion").trigger("change");
+                            
+                            refresh();
+                            $('.modal').hide();
+                        });
+
+                        $('#test').click(function() {
+                            $('.modal').show();
+                            const elems = $(".select_champion");
+                            const champs = Object.keys(champion_data).length;
+                            for (let i = 0 ; i < elems.length ; i += 1) {
+                                $(elems[i]).prop('selectedIndex', Math.floor(Math.random() * champs) + 1);
+                            }
+                            $(elems).trigger("change");
+                            
+                            refresh();
+                            $('.modal').hide();
+                        });
                     }
                 });
             },
@@ -364,6 +445,7 @@ $(document).ready(function() {
                 console.log(xhr, status);
             },
             complete: function (xhr, status) {
+                $('.modal').hide();
             }
         });
     }
