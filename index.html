@@ -9,6 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-cookie-banner/src/cookie-banner.css">
+    <script async src="./bootstrap-cookie-banner/src/cookie-banner.js"></script>
     <style>
         .bd-example-modal-lg .modal-dialog {
             display: table;
@@ -75,6 +77,25 @@
             background-color: #006e00;
             border-color: #006e00;
         }
+        
+        .rotate90 {
+            transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);;
+            -moz-transform: rotate(-90deg);  
+            margin-top: 50%;
+            margin-left: 0%;
+            width: 100%;
+            height: 100%;
+        }
+        .spinner-border, .spinner-grow {
+            width: 30rem; height: 30rem;
+            margin-top: calc(50vh - 15rem);
+        }
+        #cb-cookie-banner {
+            margin: 10px;
+            height: 50px !important;
+        }
     </style>
 </head>
 
@@ -110,13 +131,13 @@
             <thead>
                 <tr>
                     <th colspan="2" scope="col" width="20%">Players</th>
-                    <th colspan="3" scope="col" width="30%">Champion</th>
+                    <th colspan="4" scope="col" width="30%">Champion</th>
                     <th colspan="3" scope="col" width="30%">Scaling</th>
                 </tr>
                 <tr>
                     <th scope="col" width="10%">Your team</th>
                     <th scope="col" width="10%">Enemy team</th>
-                    <th scope="col" width="10%">Position</th>
+                    <th colspan=2 scope="col" width="10%">Position</th>
                     <th scope="col" width="10%">Your team</th>
                     <th scope="col" width="10%">Enemy team</th>
                     <th scope="col" width="10%">Early</th>
@@ -128,6 +149,7 @@
                 <tr>
                     <td> <select id='team1_top_player' class='select_player form-select' style="width: 100%; display:inline-block"></select> </td>
                     <td> <select id='team2_top_player' class='select_player form-select' style="width: 100%; display:inline-block"></select> </td>
+                    <th rowspan=5><div class="rotate90"><button id="reset" class="btn btn-primary">Reset</button><br><button id="test" class="btn btn-primary">Test</button></div></th>
                     <th>Top</th>
                     <td> <select id='team1_top_champion' class='select_champion form-select' style="width: 100%; display:inline-block"></select> </td>
                     <td> <select id='team2_top_champion' class='select_champion form-select' style="width: 100%; display:inline-block"></select> </td>
@@ -176,13 +198,41 @@
                     <td id='game_supp_diff_late'></td>
                 </tr>
                 <tr>
-                    <th colspan="5">Total scaling diff</th>
+                    <th colspan="6">Total scaling diff</th>
                     <td id='game_team_diff_early'></td>
                     <td id='game_team_diff_mid'></td>
                     <td id='game_team_diff_late'></td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="./comps.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="col-md-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th colspan="6" scope="col">
+                                Composition strength<br>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th width="10%" colspan="1" scope="col"></th>
+                            <th width="45%" colspan="2" scope="col">Your team</th>
+                            <th width="45%" colspan="2" scope="col">Enemy team</th>
+                        </tr>
+                    </thead>
+                    <tbody id="analysis">
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <div class="container-fluid">
         <table class="table">
@@ -211,12 +261,12 @@
             </tbody>
         </table>
     </div>
-    <div class="modal show" tabindex="-1">
-        <div class="modal-dialog">
+    <div class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-focus="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body">
-                    <div class="spinner-border text-success" role="status">
-                        <span class="sr-only">Loading...</span>
+                <div class="modal-body w-100" style="vertical-align: middle; text-align: center;">
+                    <div class="spinner-glow text-success" role="status">
+                        <span class="sr-only d-none">Loading...</span>
                     </div>
                 </div>
             </div>
@@ -230,8 +280,15 @@
         crossorigin="anonymous"></script>
     <script src="js/tsv/index.js"></script>
     <script src="js/jsdom/lib/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
+    <div id="cb-cookie-banner" class="alert alert-dark text-center mb-0" role="alert">
+        Latest update: Nilah added. Champion stats are experimental. <a href="https://www.leagueoflegends.com/en-us/event/nilah-abilities-rundown/" target="blank">Learn more</a>
+        <button type="button" class="btn btn-primary btn-sm ms-3" onclick="window.cb_hideCookieBanner()">
+          I Got It
+        </button>
+      </div>
 </body>
 
 </html>

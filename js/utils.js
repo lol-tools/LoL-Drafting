@@ -95,3 +95,61 @@ function placeChamp(elem, team, role) {
     $(`#team${team}_${role}_champion`).val(tag);
     $(`#team${team}_${role}_champion`).change();
 }
+
+const chartOptions = {
+    scales: {
+        r: {
+            angleLines: {
+                display: false
+            },
+            suggestedMin: 1000,
+            suggestedMax: 3000,
+            pointLabels: {
+                font: {
+                  size: 30
+                },
+                color: ['red', 'yellow', 'green', '#00FFFF', 'purple'],
+                backgroundColor: ['red', 'yellow', 'green', '#0000FF', 'purple']
+            },
+            grid: {
+                color: 'white',
+                lineWidth: 0.1
+            },
+            ticks: {
+                maxTicksLimit: 50,
+                display: false,
+            }
+        },
+    },
+    animation: {
+        animateScale: true,
+        animateRotate: true
+    },
+    elements: {
+        line: {
+            borderWidth: 3
+        },
+    },
+    plugins: {
+        legend: {
+            labels: {
+                // This more specific font property overrides the global property
+                font: {
+                    size: 24
+                }
+            },
+        }
+    }
+};
+
+const chartBgPlugin = {
+    id: 'custom_canvas_background_color',
+    beforeDraw: (chart) => {
+      const ctx = chart.canvas.getContext('2d');
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-over';
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, chart.width, chart.height);
+      ctx.restore();
+    }
+  };
