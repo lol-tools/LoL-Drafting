@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	0	0	5	0	4
+Neeko	0	0	5	0	0
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -100,7 +100,7 @@ Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
-Rengar	0	5	0	0	0
+Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
 Ryze	4	0	5	0	0
@@ -111,7 +111,7 @@ Seraphine	0	0	0	4	5
 Sett	5	0	0	0	0
 Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
-Shyvana	5	4	0	0	0
+Shyvana	4	5	0	0	0
 Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
@@ -121,7 +121,7 @@ Soraka	0	0	0	0	5
 Swain	0	0	5	0	4
 Sylas	0	0	5	0	0
 Syndra	0	0	5	0	0
-Tahm Kench	5	0	0	3	4
+Tahm Kench	5	0	0	4	3
 Taliyah	0	5	4	0	0
 Talon	0	5	4	0	0
 Taric	0	0	0	0	5
@@ -137,7 +137,7 @@ Urgot	5	0	0	0	0
 Varus	0	0	4	5	0
 Vayne	0	0	0	5	0
 Veigar	0	0	5	0	0
-Vel'Koz	0	0	5	0	4
+Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
 Vi	0	5	0	0	0
 Viego	0	5	0	0	0
