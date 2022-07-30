@@ -40,7 +40,7 @@ Gragas	5	0	0	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
-Heimerdinger	4	0	5	0	0
+Heimerdinger	4	0	5	0	3
 Illaoi	5	0	0	0	0
 Irelia	5	0	4	0	0
 Ivern	0	5	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	0	5	0	0	0
+Pantheon	4	5	0	0	0
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -115,7 +115,7 @@ Shyvana	4	5	0	0	0
 Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	4	5	0	0	0
+Skarner	0	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	5	0	4
