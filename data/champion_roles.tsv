@@ -56,7 +56,7 @@ Karma	0	0	0	0	5
 Karthus	0	5	0	4	0
 Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
-Kayle	5	0	4	0	0
+Kayle	5	0	0	0	0
 Kayn	0	5	0	0	0
 Kennen	5	0	0	0	0
 Kha'Zix	0	5	0	0	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	0	0	5	0	0
+Neeko	4	0	5	0	0
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -134,7 +134,7 @@ Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
 Udyr	4	5	0	0	0
 Urgot	5	0	0	0	0
-Varus	0	0	0	5	0
+Varus	0	0	4	5	0
 Vayne	0	0	0	5	0
 Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
@@ -154,7 +154,7 @@ Yone	4	0	5	0	0
 Yorick	5	0	0	0	0
 Yuumi	0	0	0	0	5
 Zac	0	5	0	0	0
-Zed	0	0	5	0	0
+Zed	0	4	5	0	0
 Zeri	0	0	0	5	0
 Ziggs	0	0	5	4	0
 Zilean	0	0	0	0	5
