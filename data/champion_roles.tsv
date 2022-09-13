@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	0	0	5	0	4
+Neeko	0	0	5	0	0
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	4	5	0	0	3
+Pantheon	4	5	2	0	3
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -103,7 +103,7 @@ Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
-Ryze	0	0	5	0	0
+Ryze	4	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	5	4	0	0	0
 Senna	0	0	0	0	5
@@ -115,7 +115,7 @@ Shyvana	4	5	0	0	0
 Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	0	5	0	0	0
+Skarner	4	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	5	0	4
@@ -142,8 +142,8 @@ Vex	0	0	5	0	0
 Vi	0	5	0	0	0
 Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
-Vladimir	4	0	5	0	0
-Volibear	4	5	0	0	0
+Vladimir	0	0	5	0	0
+Volibear	5	4	0	0	0
 Warwick	4	5	0	0	0
 Wukong	4	5	0	0	0
 Xayah	0	0	0	5	0
@@ -154,7 +154,7 @@ Yone	4	0	5	0	0
 Yorick	5	0	0	0	0
 Yuumi	0	0	0	0	5
 Zac	0	5	0	0	0
-Zed	0	0	5	0	0
+Zed	0	4	5	0	0
 Zeri	0	0	0	5	0
 Ziggs	0	0	5	4	0
 Zilean	0	0	0	0	5
