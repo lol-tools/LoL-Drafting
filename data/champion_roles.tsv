@@ -36,7 +36,7 @@ Galio	0	0	5	0	0
 Gangplank	5	0	0	0	0
 Garen	5	0	0	0	0
 Gnar	5	0	0	0	0
-Gragas	5	0	0	0	0
+Gragas	5	0	4	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
@@ -53,7 +53,7 @@ Jinx	0	0	0	5	0
 Kai'Sa	0	0	0	5	0
 Kalista	0	0	0	5	0
 Karma	0	0	0	0	5
-Karthus	0	5	0	0	0
+Karthus	0	5	0	4	0
 Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
 Kayle	5	0	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	4	5	3	0	2
+Pantheon	4	5	3	0	0
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
