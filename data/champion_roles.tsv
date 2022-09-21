@@ -36,7 +36,7 @@ Galio	0	0	5	0	0
 Gangplank	5	0	0	0	0
 Garen	5	0	0	0	0
 Gnar	5	0	0	0	0
-Gragas	5	4	3	0	0
+Gragas	5	4	0	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
@@ -56,7 +56,7 @@ Karma	0	0	0	0	5
 Karthus	0	5	0	0	0
 Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
-Kayle	5	0	0	0	0
+Kayle	5	0	4	0	0
 Kayn	0	5	0	0	0
 Kennen	5	0	0	0	0
 Kha'Zix	0	5	0	0	0
@@ -102,8 +102,8 @@ Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
-Rumble	5	0	4	0	0
-Ryze	4	0	5	0	0
+Rumble	4	0	5	0	0
+Ryze	0	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	5	4	0	0	0
 Senna	0	0	0	0	5
