@@ -1,7 +1,7 @@
 $(document).ready(function() { 
     const PSV = new TSV.TSV.Parser('\t');
     var champion_data;
-    var math = true;
+    var math = false;
     var compChart;
     var teams = [
         {'top': {}, 'jg': {}, 'mid': {}, 'adc': {}, 'supp': {}},
@@ -369,6 +369,8 @@ $(document).ready(function() {
                             const headers = Object.keys(data[0]);
                             const players = headers.slice(1, -5);
                             const positions = headers.slice(-5);
+
+                            console.log(positions, players);
                             
                             // comfort fill
                             comfort = players.map((player) => {
@@ -451,4 +453,5 @@ $(document).ready(function() {
     }
 
     init();
+    $('#math').trigger('change');
 });
