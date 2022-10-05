@@ -11,6 +11,127 @@ $(document).ready(function() {
     var comfort = [], meta = [{'Top': {}, 'Jungle': {}, 'Mid': {}, 'ADC': {}, 'Support': {}}, {'Top': {}, 'Jungle': {}, 'Mid': {}, 'ADC': {}, 'Support': {}}];
     var your_champ_data_filter = [{}, {}];
 
+    function chance(team1, team2) {
+        const chancesCoW = [
+            /*      A  C  P Si Sp*/
+            /* A*/[0, 1, 2, -2, -1],
+            /* C*/[-1, 0, 1, 2, -2],
+            /* P*/[-2, -1, 0, 1, 2],
+            /*Si*/[2, -2, -1, 0, 1],
+            /*Sp*/[1, 2, -2, -1, 0],
+        ];
+        const chancesRandomonium = [
+            /*        A    C    P   Si   Sp*/
+            /* A*/[0.00, 0.62, 0.62, 0.19, 0.40],
+            /* C*/[0.38, 0.00, 0.50, 0.72, 0.17],
+            /* P*/[0.38, 0.50, 0.00, 0.81, 0.00],
+            /*Si*/[0.81, 0.28, 0.19, 0.00, 0.75],
+            /*Sp*/[0.60, 0.83, 1.00, 0.25, 0.00],
+        ];
+        const comp_index = {
+            "CompScoreAttack": 0,
+            "CompScoreCatch": 1,
+            "CompScoreProtect": 2,
+            "CompScoreSiege": 3,
+            "CompScoreSplit": 4,
+        };
+        let indexBlue = comp_index[team1[0]];
+        let indexRed = comp_index[team2[0]];
+        /*
+        2 = blue is hard counter of  red
+        1 = blue is soft counter of  red
+        0 = blue is same    type as  red
+        -1 =  red is soft counter of blue
+        -2 =  red is hard counter of blue
+        */
+        let answer1 = chancesCoW[indexBlue][indexRed];
+        if (answer1 == 0) {
+            if (team1[1] == team2[1])
+                return 0.5;
+            return (team1[1] > team2[1]) ? 1 : 0;
+        }
+        else 
+        {
+            return chancesRandomonium[indexBlue][indexRed];
+        }
+        if (answer1 == 1) {
+            return (team1[1] >= team2[1]) ? 0.875 : 0.625;
+        }
+        if (answer1 == -1) {
+            return (team1[1] <= team2[1]) ? 0.125 : 0.375;
+        }
+        if (answer1 == 2) {
+            return 1;
+        }
+        if (answer1 == -2) {
+            return 0;
+        }
+    }
+
+    function determineWinner() {
+        const comp_team1 = Object.values(teams[0]).filter((x) => x['Champion'].length != 0);
+        const comp_team2 = Object.values(teams[1]).filter((x) => x['Champion'].length != 0);
+        const data1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1')).sort((a, b) => b[1]-a[1]).map(a => [a[0], a[1] / comp_team1.length]).slice(0, 3);
+        const data2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1')).sort((a, b) => b[1]-a[1]).map(a => [a[0], a[1] / comp_team2.length]).slice(0, 3);
+
+        console.log(data1, data2);
+        
+        let team_status = [];
+        let winner_team = 1;
+        let calc_chances = 0;
+        const eps = 0.0559375;
+
+        if (comp_team1.length == 0 && comp_team2.length == 0) {
+            calc_chances = 0.5;
+            winner_team = -1;
+        }
+        else if (comp_team1.length == 0) {
+            calc_chances = 0;
+            winner_team = 2;
+        }
+        else if (comp_team2.length == 0) {
+            calc_chances = 1;
+            winner_team = 1;
+        }
+        else {
+            for(let i = 0 ; i < 3 ; i += 1) {
+                for(let j = 0 ; j < 3 ; j += 1) {
+                    calc_chances += chance(data1[i], data2[j]);
+                }
+            }
+
+            calc_chances /= 9;
+
+            console.log(calc_chances);
+
+            winner_team = (calc_chances < 0.5 - eps) ? 2 :
+                            (calc_chances > 0.5 + eps) ? 1 :
+                            -1;
+        }
+
+        $('#eps').text('eps = ' + Math.round(eps*10000000)/100000 + '%');
+        
+        console.log(winner_team);
+
+        if (winner_team != -1) {
+            team_status[winner_team - 1] = 'winner';
+            team_status[2 - winner_team] = 'loser';
+        }
+        else {
+            team_status[0] = team_status[1] = '50';
+        }
+
+        const roles = Object.keys(teams[0]);
+        for(let i = 0 ; i < 2 ; i += 1) {
+            for(const role of roles) {
+                $(`td:has(#team${i+1}_${role}_champion)`).removeClass("winner loser").addClass(team_status[i]);
+            }
+            $(`#team${i+1}_status`).removeClass("winner loser").addClass(team_status[i]);
+            const percentage = (i == 0) ? calc_chances : 1 - calc_chances;
+            $(`#team${i+1}_status`).text(team_status[i] + " / " + (Math.round(percentage*1000)/10) + '%').css('text-transform','capitalize');
+        }
+    }
+
     function expandComps(comp, type) {
         const standardDeviation = (array) => {
             const n = array.length - 1;
@@ -183,10 +304,10 @@ $(document).ready(function() {
     function show_analysis() {
         const comp_team1 = Object.values(teams[0]).filter((x) => x['Champion'].length != 0);
         const comp_team2 = Object.values(teams[1]).filter((x) => x['Champion'].length != 0);
-        const data1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1'));
-        const data2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1'));
-        const analysis_team1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1')).sort((a, b) => b[1] - a[1]);
-        const analysis_team2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1')).sort((a, b) => b[1] - a[1]);
+        const data1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1')).map(a => [a[0], a[1] / comp_team1.length * 5]);
+        const data2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1')).map(a => [a[0], a[1] / comp_team2.length * 5]);
+        const analysis_team1 = Object.entries(scoreChampionInComp(undefined, comp_team1, 'Base 1')).sort((a, b) => b[1] - a[1]).map(a => [a[0], a[1] / comp_team1.length]);
+        const analysis_team2 = Object.entries(scoreChampionInComp(undefined, comp_team2, 'Base 1')).sort((a, b) => b[1] - a[1]).map(a => [a[0], a[1] / comp_team2.length]);
         if(compChart !== undefined) compChart.destroy();
         compChart = new Chart(
             document.getElementById('myChart'),
@@ -244,6 +365,7 @@ $(document).ready(function() {
         updateValue(`game_team_diff_late` , Math.round(Object.keys(teams[0]).map((role) => teams[0][role]['WRScoreLate']  - teams[1][role]['WRScoreLate'] ).reduce((sum, val) => sum + val, 0)*100)/100, '');
         show_suggestions(make_suggestions());
         show_analysis();
+        determineWinner();
     }    
     
     function init() {
