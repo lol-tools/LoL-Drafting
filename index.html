@@ -29,7 +29,7 @@
             border-right: 1px solid white;
         }
 
-        thead tr th {
+        thead tr th, tfoot tr th {
             text-align: center;
             color: white;
         }
@@ -95,6 +95,18 @@
         #cb-cookie-banner {
             margin: 10px;
             height: 50px !important;
+        }
+        .loser {
+            background-color: red !important;
+        }
+        .winner {
+            background-color: darkgreen !important;
+        }
+        .loser {
+            color: white !important;
+        }
+        .winner {
+            color: white !important;
         }
     </style>
 </head>
@@ -204,6 +216,19 @@
                     <td id='game_team_diff_late'></td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <tr>
+                        <td rowspan="2" colspan="4"></td>
+                        <th id="team1_status">Winner</th>
+                        <th id="team2_status">Loser</th>
+                        <td rowspan="2" colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" id="eps"></th>
+                    </tr>
+                </tr>
+            </tfoot>
         </table>
     </div>
     <div class="container-fluid">
