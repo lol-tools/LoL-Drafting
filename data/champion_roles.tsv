@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	5	4	0	0	3
+Pantheon	4	5	2	0	3
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -103,7 +103,7 @@ Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
-Ryze	0	0	5	0	0
+Ryze	4	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	4	5	0	0	0
 Senna	0	0	0	0	5
@@ -122,7 +122,7 @@ Swain	0	0	5	0	4
 Sylas	0	0	5	0	0
 Syndra	0	0	5	0	0
 Tahm Kench	5	0	0	0	4
-Taliyah	0	4	5	0	0
+Taliyah	0	5	4	0	0
 Talon	0	4	5	0	0
 Taric	0	0	0	0	5
 Teemo	5	0	0	0	0
@@ -142,7 +142,7 @@ Vex	0	0	5	0	0
 Vi	0	5	0	0	0
 Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
-Vladimir	4	0	5	0	0
+Vladimir	0	0	5	0	0
 Volibear	4	5	0	0	0
 Warwick	4	5	0	0	0
 Wukong	4	5	0	0	0
