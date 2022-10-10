@@ -13,7 +13,7 @@ Aurelion Sol	0	0	5	0	0
 Azir	0	0	5	0	0
 Bard	0	0	0	0	5
 Bel'Veth	0	5	0	0	0
-Blitzcrank	0	4	0	0	5
+Blitzcrank	0	0	0	0	5
 Brand	0	0	0	0	5
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
@@ -53,7 +53,7 @@ Jinx	0	0	0	5	0
 Kai'Sa	0	0	0	5	0
 Kalista	0	0	0	5	0
 Karma	0	0	0	0	5
-Karthus	0	5	0	0	0
+Karthus	0	5	0	4	0
 Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
 Kayle	5	0	0	0	0
@@ -73,7 +73,7 @@ Lulu	0	0	0	0	5
 Lux	0	0	4	0	5
 Malphite	5	0	0	0	0
 Malzahar	0	0	5	0	0
-Maokai	4	3	0	0	5
+Maokai	5	3	0	0	4
 Master Yi	0	5	0	0	0
 Miss Fortune	0	0	0	5	0
 Mordekaiser	5	0	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	4	5	3	0	2
+Pantheon	5	4	2	0	3
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -103,7 +103,7 @@ Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
-Ryze	4	0	5	0	0
+Ryze	0	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	4	5	0	0	0
 Senna	0	0	0	0	5
