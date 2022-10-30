@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	3	0	5	0	4
+Neeko	0	0	5	0	4
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -128,7 +128,7 @@ Taric	0	0	0	0	5
 Teemo	5	0	0	0	0
 Thresh	0	0	0	0	5
 Tristana	0	0	0	5	0
-Trundle	0	5	0	0	0
+Trundle	4	5	0	0	0
 Tryndamere	5	0	0	0	0
 Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
@@ -144,7 +144,7 @@ Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
 Vladimir	4	0	5	0	0
 Volibear	4	5	0	0	0
-Warwick	4	5	0	0	0
+Warwick	5	4	0	0	0
 Wukong	4	5	0	0	0
 Xayah	0	0	0	5	0
 Xerath	0	0	4	0	5
