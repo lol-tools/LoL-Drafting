@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	0	0	0	5
+Amumu	0	4	0	0	5
 Anivia	0	0	5	0	0
 Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
@@ -103,7 +103,7 @@ Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
-Ryze	4	0	5	0	0
+Ryze	0	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	4	5	0	0	0
 Senna	0	0	0	0	5
@@ -134,7 +134,7 @@ Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
-Varus	0	0	4	5	0
+Varus	0	0	0	5	0
 Vayne	4	0	0	5	0
 Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
@@ -143,7 +143,7 @@ Vi	0	5	0	0	0
 Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
 Vladimir	4	0	5	0	0
-Volibear	4	5	0	0	0
+Volibear	5	4	0	0	0
 Warwick	5	4	0	0	0
 Wukong	4	5	0	0	0
 Xayah	0	0	0	5	0
