@@ -19,7 +19,7 @@ Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
 Cassiopeia	0	0	5	0	0
-Cho'Gath	5	0	4	0	0
+Cho'Gath	5	0	0	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
 Diana	0	5	4	0	0
@@ -58,7 +58,7 @@ Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
 Kayle	5	0	0	0	0
 Kayn	0	5	0	0	0
-Kennen	5	0	0	0	0
+Kennen	5	0	4	0	0
 Kha'Zix	0	5	0	0	0
 Kindred	0	5	0	0	0
 Kled	5	0	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	5	3	2	0	4
+Pantheon	5	4	3	0	2
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -102,7 +102,7 @@ Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
-Rumble	5	0	4	0	0
+Rumble	4	0	5	0	0
 Ryze	0	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	4	5	0	0	0
