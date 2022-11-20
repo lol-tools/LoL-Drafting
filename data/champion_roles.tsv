@@ -38,7 +38,7 @@ Garen	5	0	0	0	0
 Gnar	5	0	0	0	0
 Gragas	5	4	0	0	0
 Graves	0	5	0	0	0
-Gwen	5	0	0	0	0
+Gwen	5	4	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
@@ -56,7 +56,7 @@ Karma	0	0	0	0	5
 Karthus	0	5	0	4	0
 Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
-Kayle	5	0	4	0	0
+Kayle	5	0	0	0	0
 Kayn	0	5	0	0	0
 Kennen	5	0	0	0	0
 Kha'Zix	0	5	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	4	0	3	0	5
+Pantheon	3	0	4	0	5
 Poppy	5	4	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -102,7 +102,7 @@ Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
-Rumble	4	3	5	0	0
+Rumble	5	3	4	0	0
 Ryze	0	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	4	5	0	0	0
@@ -118,12 +118,12 @@ Sivir	0	0	0	5	0
 Skarner	0	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
-Swain	0	0	5	0	4
+Swain	0	0	4	0	5
 Sylas	0	0	5	0	0
 Syndra	0	0	5	0	0
 Tahm Kench	5	0	0	0	4
 Taliyah	0	5	4	0	0
-Talon	0	5	4	0	0
+Talon	0	4	5	0	0
 Taric	0	0	0	0	5
 Teemo	5	0	0	0	0
 Thresh	0	0	0	0	5
@@ -145,7 +145,7 @@ Viktor	0	0	5	0	0
 Vladimir	4	0	5	0	0
 Volibear	5	4	0	0	0
 Warwick	4	5	0	0	0
-Wukong	4	5	0	0	0
+Wukong	0	5	0	0	0
 Xayah	0	0	0	5	0
 Xerath	0	0	4	0	5
 Xin Zhao	0	5	0	0	0
