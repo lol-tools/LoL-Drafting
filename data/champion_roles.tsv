@@ -90,7 +90,7 @@ Olaf	5	4	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
 Pantheon	4	0	3	0	5
-Poppy	4	5	0	0	0
+Poppy	5	4	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
 Quinn	5	0	0	0	0
@@ -115,20 +115,20 @@ Shyvana	0	5	0	0	0
 Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	0	5	0	0	0
+Skarner	4	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
-Sylas	0	0	5	0	0
+Sylas	0	4	5	0	0
 Syndra	0	0	5	0	0
 Tahm Kench	5	0	0	0	4
-Taliyah	0	5	4	0	0
+Taliyah	0	4	5	0	0
 Talon	0	4	5	0	0
 Taric	0	0	0	0	5
 Teemo	5	0	0	0	0
 Thresh	0	0	0	0	5
 Tristana	0	0	0	5	0
-Trundle	4	5	0	0	0
+Trundle	0	5	0	0	0
 Tryndamere	5	0	4	0	0
 Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
@@ -136,7 +136,7 @@ Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
 Vayne	0	0	0	5	0
-Veigar	0	0	5	0	0
+Veigar	0	0	5	4	0
 Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
 Vi	0	5	0	0	0
