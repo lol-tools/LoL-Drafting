@@ -19,7 +19,7 @@ Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
 Cassiopeia	0	0	5	0	0
-Cho'Gath	5	0	0	0	0
+Cho'Gath	5	0	4	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
 Diana	0	5	4	0	0
@@ -36,9 +36,9 @@ Galio	0	0	5	0	0
 Gangplank	5	0	0	0	0
 Garen	5	0	0	0	0
 Gnar	5	0	0	0	0
-Gragas	5	4	0	0	0
+Gragas	5	0	0	0	0
 Graves	0	5	0	0	0
-Gwen	5	4	0	0	0
+Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	0	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	5	0	3	0	4
+Pantheon	4	0	3	0	5
 Poppy	5	4	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	4	5	0	0
@@ -112,7 +112,7 @@ Sett	5	0	0	0	0
 Shaco	0	5	0	0	4
 Shen	5	0	0	0	0
 Shyvana	0	5	0	0	0
-Singed	5	0	4	0	0
+Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
 Skarner	0	5	0	0	0
