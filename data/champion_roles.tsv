@@ -36,9 +36,9 @@ Galio	0	0	5	0	0
 Gangplank	5	0	0	0	0
 Garen	5	0	0	0	0
 Gnar	5	0	0	0	0
-Gragas	5	0	0	0	0
+Gragas	5	4	0	0	0
 Graves	0	5	0	0	0
-Gwen	5	0	0	0	0
+Gwen	5	4	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
@@ -73,7 +73,7 @@ Lulu	0	0	0	0	5
 Lux	0	0	4	0	5
 Malphite	5	0	0	0	0
 Malzahar	0	0	5	0	0
-Maokai	0	0	0	0	5
+Maokai	4	0	0	0	5
 Master Yi	0	5	0	0	0
 Miss Fortune	0	0	0	5	0
 Mordekaiser	5	4	0	0	0
@@ -92,7 +92,7 @@ Ornn	5	0	0	0	0
 Pantheon	4	0	3	0	5
 Poppy	5	4	0	0	0
 Pyke	0	0	0	0	5
-Qiyana	0	4	5	0	0
+Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
 Rakan	0	0	0	0	5
 Rammus	0	5	0	0	0
@@ -129,7 +129,7 @@ Teemo	5	0	0	0	0
 Thresh	0	0	0	0	5
 Tristana	0	0	0	5	0
 Trundle	4	5	0	0	0
-Tryndamere	5	0	0	0	0
+Tryndamere	5	0	4	0	0
 Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
