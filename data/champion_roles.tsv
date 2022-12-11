@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	4	0	0	5
+Amumu	0	0	0	0	5
 Anivia	0	0	5	0	0
 Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
@@ -38,7 +38,7 @@ Garen	5	0	0	0	0
 Gnar	5	0	0	0	0
 Gragas	5	4	3	0	0
 Graves	0	5	0	0	0
-Gwen	5	4	0	0	0
+Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
@@ -58,7 +58,7 @@ Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
 Kayle	5	0	0	0	0
 Kayn	0	5	0	0	0
-Kennen	5	0	0	0	0
+Kennen	5	0	4	0	0
 Kha'Zix	0	5	0	0	0
 Kindred	0	5	0	0	0
 Kled	5	0	0	0	0
@@ -112,10 +112,10 @@ Sett	5	0	0	0	0
 Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
 Shyvana	0	5	0	0	0
-Singed	5	0	4	0	0
+Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	4	5	0	0	0
+Skarner	0	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
