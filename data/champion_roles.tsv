@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	4	0	0	5
+Amumu	0	0	0	0	5
 Anivia	0	0	5	0	0
 Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
@@ -89,8 +89,8 @@ Nunu	0	5	0	0	0
 Olaf	5	0	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	4	0	3	0	5
-Poppy	5	4	0	0	0
+Pantheon	5	0	3	0	4
+Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
@@ -115,7 +115,7 @@ Shyvana	0	5	0	0	0
 Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	4	5	0	0	0
+Skarner	0	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
@@ -153,7 +153,7 @@ Yasuo	0	0	5	0	0
 Yone	4	0	5	0	0
 Yorick	5	0	0	0	0
 Yuumi	0	0	0	0	5
-Zac	4	5	0	0	0
+Zac	0	5	0	0	0
 Zed	0	4	5	0	0
 Zeri	0	0	0	5	0
 Ziggs	0	0	5	4	0
