@@ -18,7 +18,7 @@ Brand	0	0	0	0	5
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
-Cassiopeia	0	0	5	0	0
+Cassiopeia	4	0	5	0	0
 Cho'Gath	5	0	4	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
@@ -90,7 +90,7 @@ Olaf	5	0	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
 Pantheon	5	0	3	0	4
-Poppy	5	4	0	0	0
+Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
@@ -99,7 +99,7 @@ Rammus	0	5	0	0	0
 Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
-Renekton	5	0	0	0	0
+Renekton	5	0	4	0	0
 Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	4	0	5	0	0
@@ -115,7 +115,7 @@ Shyvana	0	5	0	0	0
 Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	0	5	0	0	0
+Skarner	4	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
@@ -136,7 +136,7 @@ Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
 Vayne	0	0	0	5	0
-Veigar	0	0	5	0	0
+Veigar	0	0	5	4	0
 Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
 Vi	0	5	0	0	0
