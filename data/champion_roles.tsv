@@ -42,7 +42,7 @@ Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
-Irelia	5	0	4	0	0
+Irelia	4	0	5	0	0
 Ivern	0	5	0	0	0
 Janna	0	0	0	0	5
 Jarvan IV	0	5	0	0	0
@@ -56,9 +56,9 @@ Karma	0	0	0	0	5
 Karthus	0	5	0	4	0
 Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
-Kayle	5	0	0	0	0
+Kayle	5	0	4	0	0
 Kayn	0	5	0	0	0
-Kennen	5	0	4	0	0
+Kennen	5	0	0	0	0
 Kha'Zix	0	5	0	0	0
 Kindred	0	5	0	0	0
 Kled	5	0	0	0	0
@@ -112,7 +112,7 @@ Sett	5	0	0	0	0
 Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
 Shyvana	4	5	0	0	0
-Singed	5	0	0	0	0
+Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
 Skarner	4	5	0	0	0
@@ -121,7 +121,7 @@ Soraka	0	0	0	0	5
 Swain	0	0	5	0	4
 Sylas	0	5	4	0	0
 Syndra	0	0	5	0	0
-Tahm Kench	5	0	0	0	4
+Tahm Kench	5	0	0	0	0
 Taliyah	0	4	5	0	0
 Talon	0	4	5	0	0
 Taric	0	0	0	0	5
@@ -132,7 +132,7 @@ Trundle	4	5	0	0	0
 Tryndamere	5	0	4	0	0
 Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	4
-Udyr	0	5	0	0	0
+Udyr	4	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
 Vayne	0	0	0	5	0
