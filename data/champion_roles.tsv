@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	5	0	0	4
+Amumu	0	4	0	0	5
 Anivia	0	0	5	0	0
 Annie	0	0	4	0	5
 Aphelios	0	0	0	5	0
@@ -42,7 +42,7 @@ Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
-Irelia	4	0	5	0	0
+Irelia	5	0	4	0	0
 Ivern	0	5	0	0	0
 Janna	0	0	0	0	5
 Jarvan IV	0	5	0	0	0
@@ -73,7 +73,7 @@ Lulu	0	0	0	0	5
 Lux	0	0	4	0	5
 Malphite	5	0	0	0	0
 Malzahar	0	0	5	0	0
-Maokai	0	5	0	0	0
+Maokai	0	5	0	0	4
 Master Yi	0	5	0	0	0
 Miss Fortune	0	0	0	5	0
 Mordekaiser	5	0	0	0	0
@@ -135,7 +135,7 @@ Twitch	0	0	0	5	4
 Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
-Vayne	4	0	0	5	0
+Vayne	0	0	0	5	0
 Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
