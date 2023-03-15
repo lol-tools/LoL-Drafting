@@ -42,7 +42,7 @@ Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
-Irelia	5	0	4	0	0
+Irelia	4	0	5	0	0
 Ivern	0	5	0	0	0
 Janna	0	0	0	0	5
 Jarvan IV	0	5	0	0	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	3	0	5	0	4
+Neeko	4	0	5	0	0
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -115,7 +115,7 @@ Shyvana	0	5	0	0	0
 Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	4	5	0	0	0
+Skarner	0	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
@@ -131,7 +131,7 @@ Tristana	0	0	4	5	0
 Trundle	4	5	0	0	0
 Tryndamere	5	0	0	0	0
 Twisted Fate	0	0	5	0	0
-Twitch	0	0	0	5	4
+Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
