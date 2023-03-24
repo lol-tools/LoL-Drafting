@@ -23,7 +23,7 @@ Cho'Gath	5	0	0	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
 Diana	0	5	4	0	0
-Dr. Mundo	5	0	0	0	0
+Dr. Mundo	5	4	0	0	0
 Draven	0	0	0	5	0
 Ekko	0	5	4	0	0
 Elise	0	5	0	0	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	4	0	5	0	3
+Neeko	4	0	5	0	0
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -115,7 +115,7 @@ Shyvana	0	5	0	0	0
 Singed	5	0	4	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
-Skarner	4	5	0	0	0
+Skarner	0	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
@@ -144,7 +144,7 @@ Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
 Vladimir	4	0	5	0	0
 Volibear	5	4	0	0	0
-Warwick	4	5	0	0	0
+Warwick	5	4	0	0	0
 Wukong	0	5	0	0	0
 Xayah	0	0	0	5	0
 Xerath	0	0	4	0	5
