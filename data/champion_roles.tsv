@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	5	0	0	4
+Amumu	0	4	0	0	5
 Anivia	0	0	5	0	0
 Annie	0	0	4	0	5
 Aphelios	0	0	0	5	0
@@ -19,7 +19,7 @@ Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
 Cassiopeia	0	0	5	0	0
-Cho'Gath	5	0	0	0	0
+Cho'Gath	5	0	4	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
 Diana	0	5	4	0	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	4	0	5	0	0
+Neeko	0	0	5	0	4
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -95,7 +95,7 @@ Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
 Rakan	0	0	0	0	5
-Rammus	0	5	0	0	0
+Rammus	4	5	0	0	0
 Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
@@ -129,7 +129,7 @@ Teemo	5	0	0	0	0
 Thresh	0	0	0	0	5
 Tristana	0	0	4	5	0
 Trundle	4	5	0	0	0
-Tryndamere	5	0	4	0	0
+Tryndamere	5	0	0	0	0
 Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
@@ -144,7 +144,7 @@ Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
 Vladimir	4	0	5	0	0
 Volibear	5	4	0	0	0
-Warwick	4	5	0	0	0
+Warwick	5	4	0	0	0
 Wukong	0	5	0	0	0
 Xayah	0	0	0	5	0
 Xerath	0	0	4	0	5
