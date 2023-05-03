@@ -47,7 +47,7 @@ Ivern	0	5	0	0	0
 Janna	0	0	0	0	5
 Jarvan IV	0	5	0	0	0
 Jax	5	0	0	0	0
-Jayce	5	0	4	0	0
+Jayce	5	0	0	0	0
 Jhin	0	0	0	5	0
 Jinx	0	0	0	5	0
 Kai'Sa	0	0	0	5	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	3	0	5	0	4
+Neeko	0	0	5	0	4
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -136,7 +136,7 @@ Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
 Vayne	0	0	0	5	0
-Veigar	0	0	5	4	0
+Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
 Vi	0	5	0	0	0
