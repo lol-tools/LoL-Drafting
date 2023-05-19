@@ -42,7 +42,7 @@ Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
 Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
-Irelia	4	0	5	0	0
+Irelia	5	0	4	0	0
 Ivern	0	5	0	0	0
 Janna	0	0	0	0	5
 Jarvan IV	0	5	0	0	0
@@ -73,7 +73,7 @@ Lulu	0	0	0	0	5
 Lux	0	0	4	0	5
 Malphite	5	0	0	0	0
 Malzahar	0	0	5	0	0
-Maokai	3	5	0	0	4
+Maokai	0	5	0	0	4
 Master Yi	0	5	0	0	0
 Miss Fortune	0	0	0	5	0
 Mordekaiser	5	0	0	0	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	0	4	5	0	3
+Neeko	0	5	4	0	3
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -95,7 +95,7 @@ Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
 Rakan	0	0	0	0	5
-Rammus	0	5	0	0	0
+Rammus	4	5	0	0	0
 Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
@@ -109,7 +109,7 @@ Sejuani	0	5	0	0	0
 Senna	0	0	0	0	5
 Seraphine	0	0	0	4	5
 Sett	5	0	0	0	0
-Shaco	0	5	0	0	4
+Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
 Shyvana	0	5	0	0	0
 Singed	5	0	0	0	0
