@@ -6,7 +6,7 @@ Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
 Amumu	0	5	0	0	4
 Anivia	0	0	5	0	0
-Annie	0	0	5	0	4
+Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
 Ashe	0	0	0	5	4
 Aurelion Sol	0	0	5	0	0
@@ -18,7 +18,7 @@ Brand	0	0	0	0	5
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
-Cassiopeia	4	0	5	0	0
+Cassiopeia	0	0	5	0	0
 Cho'Gath	5	0	4	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
@@ -40,7 +40,7 @@ Gragas	4	5	0	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
-Heimerdinger	0	0	0	0	5
+Heimerdinger	4	0	0	0	5
 Illaoi	5	0	0	0	0
 Irelia	5	0	4	0	0
 Ivern	0	5	0	0	0
@@ -95,19 +95,19 @@ Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
 Rakan	0	0	0	0	5
-Rammus	4	5	0	0	0
+Rammus	0	5	0	0	0
 Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
-Rengar	4	5	0	0	0
+Rengar	0	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	4	0	5	0	0
-Ryze	0	0	5	0	0
+Ryze	4	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	0	5	0	0	0
 Senna	0	0	0	0	5
-Seraphine	0	0	0	4	5
+Seraphine	0	0	0	0	5
 Sett	5	0	0	0	0
 Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
