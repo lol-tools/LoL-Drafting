@@ -6,7 +6,7 @@ Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
 Amumu	0	5	0	0	4
 Anivia	0	0	5	0	0
-Annie	0	0	5	0	4
+Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
 Ashe	0	0	0	4	5
 Aurelion Sol	0	0	5	0	0
@@ -14,12 +14,12 @@ Azir	0	0	5	0	0
 Bard	0	0	0	0	5
 Bel'Veth	0	5	0	0	0
 Blitzcrank	0	0	0	0	5
-Brand	0	0	0	0	5
+Brand	0	0	4	0	5
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
 Cassiopeia	4	0	5	0	0
-Cho'Gath	5	0	4	0	0
+Cho'Gath	5	0	0	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
 Diana	0	5	4	0	0
@@ -73,7 +73,7 @@ Lulu	0	0	0	0	5
 Lux	0	0	4	0	5
 Malphite	5	0	0	0	0
 Malzahar	0	0	5	0	0
-Maokai	4	5	0	0	0
+Maokai	4	5	0	0	3
 Master Yi	0	5	0	0	0
 Miss Fortune	0	0	0	5	0
 Mordekaiser	5	0	0	0	0
@@ -103,7 +103,7 @@ Renekton	5	0	0	0	0
 Rengar	0	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
-Ryze	4	0	5	0	0
+Ryze	0	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	0	5	0	0	0
 Senna	0	0	0	0	5
@@ -135,7 +135,7 @@ Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
-Vayne	0	0	0	5	0
+Vayne	4	0	0	5	0
 Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
