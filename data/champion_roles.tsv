@@ -8,7 +8,7 @@ Amumu	0	5	0	0	4
 Anivia	0	0	5	0	0
 Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
-Ashe	0	0	0	4	5
+Ashe	0	0	0	5	4
 Aurelion Sol	0	0	5	0	0
 Azir	0	0	5	0	0
 Bard	0	0	0	0	5
@@ -95,7 +95,7 @@ Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
 Rakan	0	0	0	0	5
-Rammus	4	5	0	0	0
+Rammus	0	5	0	0	0
 Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
@@ -103,7 +103,7 @@ Renekton	5	0	0	0	0
 Rengar	0	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	4	0	0
-Ryze	0	0	5	0	0
+Ryze	4	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	0	5	0	0	0
 Senna	0	0	0	0	5
@@ -135,7 +135,7 @@ Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
 Varus	0	0	0	5	0
-Vayne	4	0	0	5	0
+Vayne	0	0	0	5	0
 Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
 Vex	0	0	5	0	0
