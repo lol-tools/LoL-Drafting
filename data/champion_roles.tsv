@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	4	0	0	5
+Amumu	0	5	0	0	4
 Anivia	0	0	5	0	0
 Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
@@ -109,7 +109,7 @@ Sejuani	0	5	0	0	0
 Senna	0	0	0	0	5
 Seraphine	0	0	0	4	5
 Sett	5	0	0	0	0
-Shaco	0	5	0	0	0
+Shaco	0	5	0	0	4
 Shen	5	0	0	0	0
 Shyvana	0	5	0	0	0
 Singed	5	0	0	0	0
@@ -153,7 +153,7 @@ Yasuo	0	0	5	0	0
 Yone	4	0	5	0	0
 Yorick	5	0	0	0	0
 Yuumi	0	0	0	0	5
-Zac	4	5	0	0	0
+Zac	0	5	0	0	0
 Zed	0	0	5	0	0
 Zeri	0	0	0	5	0
 Ziggs	0	0	5	4	0
