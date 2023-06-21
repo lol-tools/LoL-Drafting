@@ -4,7 +4,7 @@ Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
 Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
-Amumu	0	5	0	0	4
+Amumu	0	4	0	0	5
 Anivia	0	0	5	0	0
 Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
@@ -40,7 +40,7 @@ Gragas	4	5	0	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
-Heimerdinger	0	0	0	0	5
+Heimerdinger	4	0	0	0	5
 Illaoi	5	0	0	0	0
 Irelia	5	0	4	0	0
 Ivern	4	5	0	0	0
@@ -81,7 +81,7 @@ Morgana	0	0	0	0	5
 Nami	0	0	0	0	5
 Nasus	5	0	0	0	0
 Nautilus	0	0	0	0	5
-Neeko	0	0	5	0	4
+Neeko	0	4	5	0	3
 Nidalee	0	5	0	0	0
 Nilah	0	0	0	5	0
 Nocturne	0	5	0	0	0
@@ -95,7 +95,7 @@ Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
 Quinn	5	0	0	0	0
 Rakan	0	0	0	0	5
-Rammus	4	5	0	0	0
+Rammus	0	5	0	0	0
 Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
