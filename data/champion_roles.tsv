@@ -40,10 +40,10 @@ Gragas	4	5	0	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
-Heimerdinger	4	0	0	0	5
+Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
 Irelia	5	0	4	0	0
-Ivern	0	5	0	0	0
+Ivern	4	5	0	0	0
 Janna	0	0	0	0	5
 Jarvan IV	0	5	0	0	0
 Jax	5	0	0	0	0
@@ -134,7 +134,7 @@ Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
 Udyr	0	5	0	0	0
 Urgot	5	0	0	0	0
-Varus	4	0	0	5	0
+Varus	0	0	0	5	0
 Vayne	0	0	0	5	0
 Veigar	0	0	5	0	0
 Vel'Koz	0	0	4	0	5
@@ -155,7 +155,7 @@ Yorick	5	0	0	0	0
 Yuumi	0	0	0	0	5
 Zac	0	5	0	0	0
 Zed	0	0	5	0	0
-Zeri	0	0	0	5	0
+Zeri	0	0	4	5	0
 Ziggs	0	0	5	4	0
 Zilean	0	0	0	0	5
 Zoe	0	0	5	0	0
