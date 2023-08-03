@@ -14,11 +14,11 @@ Azir	0	0	5	0	0
 Bard	0	0	0	0	5
 Bel'Veth	0	5	0	0	0
 Blitzcrank	0	0	0	0	5
-Brand	0	0	0	0	5
+Brand	0	0	4	0	5
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
-Cassiopeia	0	0	5	0	0
+Cassiopeia	4	0	5	0	0
 Cho'Gath	5	0	4	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
@@ -40,7 +40,7 @@ Gragas	4	5	0	0	0
 Graves	0	5	0	0	0
 Gwen	5	0	0	0	0
 Hecarim	0	5	0	0	0
-Heimerdinger	4	0	0	0	5
+Heimerdinger	0	0	0	0	5
 Illaoi	5	0	0	0	0
 Irelia	5	0	4	0	0
 Ivern	0	5	0	0	0
@@ -102,7 +102,7 @@ Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
 Rengar	0	5	0	0	0
 Riven	5	0	0	0	0
-Rumble	5	0	4	0	0
+Rumble	5	0	0	0	0
 Ryze	4	0	5	0	0
 Samira	0	0	0	5	0
 Sejuani	0	5	0	0	0
@@ -147,9 +147,9 @@ Volibear	5	4	0	0	0
 Warwick	5	4	0	0	0
 Wukong	4	5	0	0	0
 Xayah	0	0	0	5	0
-Xerath	0	0	4	0	5
+Xerath	0	0	5	0	4
 Xin Zhao	0	5	0	0	0
-Yasuo	4	0	5	0	0
+Yasuo	0	0	5	0	0
 Yone	4	0	5	0	0
 Yorick	5	0	0	0	0
 Yuumi	0	0	0	0	5
