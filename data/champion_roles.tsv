@@ -14,7 +14,7 @@ Azir	0	0	5	0	0
 Bard	0	0	0	0	5
 Bel'Veth	0	5	0	0	0
 Blitzcrank	0	0	0	0	5
-Brand	0	0	4	0	5
+Brand	0	0	0	0	5
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
@@ -100,7 +100,7 @@ Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
-Rengar	0	5	0	0	0
+Rengar	4	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	0	0	0
 Ryze	4	0	5	0	0
@@ -112,7 +112,7 @@ Sett	5	0	0	0	0
 Shaco	0	5	0	0	4
 Shen	5	0	0	0	0
 Shyvana	4	5	0	0	0
-Singed	5	0	4	0	0
+Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
 Skarner	4	5	0	0	0
@@ -122,13 +122,13 @@ Swain	0	0	4	3	5
 Sylas	0	4	5	0	0
 Syndra	0	0	5	0	0
 Tahm Kench	5	0	0	0	4
-Taliyah	0	4	5	0	0
+Taliyah	0	5	4	0	0
 Talon	0	4	5	0	0
 Taric	0	0	0	0	5
 Teemo	5	0	0	0	0
 Thresh	0	0	0	0	5
 Tristana	0	0	5	4	0
-Trundle	4	5	0	0	0
+Trundle	5	4	0	0	0
 Tryndamere	5	0	0	0	0
 Twisted Fate	0	0	5	0	0
 Twitch	0	0	0	5	0
@@ -142,7 +142,7 @@ Vex	0	0	5	0	0
 Vi	0	5	0	0	0
 Viego	0	5	0	0	0
 Viktor	0	0	5	0	0
-Vladimir	4	0	5	0	0
+Vladimir	0	0	5	0	0
 Volibear	5	4	0	0	0
 Warwick	5	4	0	0	0
 Wukong	4	5	0	0	0
