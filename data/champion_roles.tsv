@@ -2,11 +2,11 @@ Champion	Top	Jungle	Mid	ADC	Support
 Aatrox	5	0	0	0	0
 Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
-Akshan	0	0	5	0	0
+Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
 Amumu	0	5	0	0	4
 Anivia	0	0	5	0	0
-Annie	0	0	5	0	4
+Annie	0	0	5	0	0
 Aphelios	0	0	0	5	0
 Ashe	0	0	0	5	4
 Aurelion Sol	0	0	5	0	0
@@ -18,7 +18,7 @@ Brand	0	5	0	0	4
 Braum	0	0	0	0	5
 Caitlyn	0	0	0	5	0
 Camille	5	0	0	0	0
-Cassiopeia	4	0	5	0	0
+Cassiopeia	0	0	5	0	0
 Cho'Gath	5	0	4	0	0
 Corki	0	0	5	0	0
 Darius	5	0	0	0	0
@@ -89,7 +89,7 @@ Nunu	0	5	0	0	0
 Olaf	5	0	0	0	0
 Orianna	0	0	5	0	0
 Ornn	5	0	0	0	0
-Pantheon	5	0	4	0	0
+Pantheon	5	0	4	0	3
 Poppy	4	5	0	0	0
 Pyke	0	0	0	0	5
 Qiyana	0	0	5	0	0
@@ -121,7 +121,7 @@ Soraka	0	0	0	0	5
 Swain	0	0	4	0	5
 Sylas	0	0	5	0	0
 Syndra	0	0	5	0	0
-Tahm Kench	5	0	0	3	4
+Tahm Kench	5	0	0	4	3
 Taliyah	0	5	4	0	0
 Talon	0	4	5	0	0
 Taric	0	0	0	0	5
