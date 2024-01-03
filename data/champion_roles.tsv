@@ -58,7 +58,7 @@ Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
 Kayle	5	0	0	0	0
 Kayn	0	5	0	0	0
-Kennen	5	0	0	0	0
+Kennen	5	0	4	0	0
 Kha'Zix	0	5	0	0	0
 Kindred	0	5	0	0	0
 Kled	5	0	0	0	0
@@ -100,7 +100,7 @@ Rek'Sai	0	5	0	0	0
 Rell	0	0	0	0	5
 Renata	0	0	0	0	5
 Renekton	5	0	0	0	0
-Rengar	4	5	0	0	0
+Rengar	0	5	0	0	0
 Riven	5	0	0	0	0
 Rumble	5	0	0	0	0
 Ryze	4	0	5	0	0
@@ -111,14 +111,14 @@ Seraphine	0	0	0	4	5
 Sett	5	0	0	0	0
 Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
-Shyvana	4	5	0	0	0
+Shyvana	0	5	0	0	0
 Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
 Skarner	4	5	0	0	0
 Sona	0	0	0	0	5
 Soraka	0	0	0	0	5
-Swain	0	0	4	0	5
+Swain	0	0	4	3	5
 Sylas	0	0	5	0	0
 Syndra	0	0	5	0	0
 Tahm Kench	5	0	0	0	4
