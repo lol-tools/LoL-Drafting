@@ -2,7 +2,7 @@ Champion	Top	Jungle	Mid	ADC	Support
 Aatrox	5	0	0	0	0
 Ahri	0	0	5	0	0
 Akali	4	0	5	0	0
-Akshan	0	0	5	0	0
+Akshan	4	0	5	0	0
 Alistar	0	0	0	0	5
 Amumu	0	5	0	0	4
 Anivia	0	0	5	0	0
@@ -58,7 +58,7 @@ Kassadin	0	0	5	0	0
 Katarina	0	0	5	0	0
 Kayle	5	0	0	0	0
 Kayn	0	5	0	0	0
-Kennen	5	0	4	0	0
+Kennen	5	0	0	0	0
 Kha'Zix	0	5	0	0	0
 Kindred	0	5	0	0	0
 Kled	5	0	0	0	0
@@ -111,7 +111,7 @@ Seraphine	0	0	0	4	5
 Sett	5	0	0	0	0
 Shaco	0	5	0	0	0
 Shen	5	0	0	0	0
-Shyvana	0	5	0	0	0
+Shyvana	4	5	0	0	0
 Singed	5	0	0	0	0
 Sion	5	0	0	0	0
 Sivir	0	0	0	5	0
@@ -121,7 +121,7 @@ Soraka	0	0	0	0	5
 Swain	0	0	4	3	5
 Sylas	0	0	5	0	0
 Syndra	0	0	5	0	0
-Tahm Kench	5	0	0	0	4
+Tahm Kench	5	0	0	0	0
 Taliyah	0	5	4	0	0
 Talon	0	4	5	0	0
 Taric	0	0	0	0	5
