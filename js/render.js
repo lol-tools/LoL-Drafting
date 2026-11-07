@@ -23,11 +23,20 @@ function cell(tag, { text, className, attrs = {} } = {}) {
   return node;
 }
 
-/** Comp labels are joined with "<br>" by the model. Build real <br> elements, no innerHTML. */
+/**
+ * Comp labels are joined with "<br>" by the model. Build real <br> elements, no innerHTML.
+ * A <wbr> after each "/" lets long labels wrap. It adds no text, so textContent is unchanged.
+ */
 function appendLabel(node, label) {
-  label.split('<br>').forEach((part, index) => {
+  label.split('<br>').forEach((line, index) => {
     if (index > 0) node.append(document.createElement('br'));
-    node.append(part);
+    line.split('/').forEach((segment, i) => {
+      if (i > 0) {
+        node.append('/');
+        node.append(document.createElement('wbr'));
+      }
+      node.append(segment);
+    });
   });
   return node;
 }
@@ -216,10 +225,22 @@ export function renderRadar() {
 /** @param {{ active: string, reason: string, learned: { patch: string | null, generatedAt: string } | null }} status */
 export function renderModelStatus(status) {
   const node = byId('model-status');
-  const patch = status.learned?.patch ? `patch ${status.learned.patch}` : 'no patch tag';
   node.querySelector('[data-model-name]').textContent = MODEL_NAMES[status.active] ?? status.active;
-  node.querySelector('[data-model-detail]').textContent = `${patch}. ${status.reason}.`;
+  node.querySelector('[data-model-detail]').textContent = describeStatus(status);
   node.dataset.state = status.learned ? 'learned-pending' : 'heuristic';
+}
+
+function describeStatus(status) {
+  if (!status.learned) {
+    return `Heuristic model in use. ${capitalize(status.reason)}.`;
+  }
+  const { patch, generatedAt } = status.learned;
+  const which = patch ? `patch ${patch}` : 'an unknown patch';
+  return `Heuristic model in use. Learned weights for ${which}, generated ${generatedAt}, are available but not applied yet.`;
+}
+
+function capitalize(text) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 export function setBusy(isBusy, label = '') {
