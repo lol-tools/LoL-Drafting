@@ -31,7 +31,7 @@ const TEAMS = [0, 1];
 const state = {
   tables: null, // from loadChampionTables()
   teams: [{}, {}], // role -> champion row, or the empty placeholder row
-  comfort: {}, // player -> champion -> value; shared by both teams, as on the old page
+  comfort: [{}, {}], // per team: player -> champion -> comfort value, from that team's file
 };
 
 function championSelects() {
@@ -68,6 +68,15 @@ function refresh() {
   renderStatus(calc, statusForWinner(winner));
 }
 
+/**
+ * Comfort for one player on one champion, from that team's own file. A missing player
+ * or champion counts as 0. The old page produced NaN here, and the suggestion filter
+ * dropped those champions too, so the visible list is the same.
+ */
+function comfortOf(team, player, name) {
+  return state.comfort[team]?.[player]?.[name] ?? 0;
+}
+
 /** Uses the player's comfort for this role, as the old page did. */
 function applyPlayer(team, role, player) {
   const { championData, roleFilter, meta } = state.tables;
@@ -75,7 +84,7 @@ function applyPlayer(team, role, player) {
   for (const tag of Object.keys(championData)) {
     if (tag.length > 0) {
       const name = championData[tag].Champion;
-      roleFilter[team][name][role] = Math.pow(meta[team][longRole][name], 2) * state.comfort[player][name];
+      roleFilter[team][name][role] = Math.pow(meta[team][longRole][name], 2) * comfortOf(team, player, name);
     }
   }
 }
@@ -96,7 +105,7 @@ async function onTeamFile(team, file) {
   setBusy(true, 'Reading team file');
   try {
     const { players, comfort, meta } = parseTeamFile(await file.text());
-    state.comfort = comfort;
+    state.comfort[team] = comfort;
     state.tables.meta[team] = meta;
     for (const role of ROLES_SHORT) {
       const select = byId(`team${team + 1}_${role}_player`);
@@ -121,7 +130,9 @@ function resetPicks() {
 }
 
 function randomPicks() {
-  const champs = Object.keys(state.tables.championData).length;
+  // Real champions only. The '' placeholder key is not an option, so counting it would let
+  // selectedIndex run one past the last option and leave the slot blank.
+  const champs = Object.keys(state.tables.championData).filter((tag) => tag !== '').length;
   for (const select of championSelects()) {
     select.selectedIndex = Math.floor(Math.random() * champs) + 1;
     onChampionChange(select);
