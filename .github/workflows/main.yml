@@ -4,15 +4,9 @@ name: Win Rates update
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
+  # Manual runs only. The scheduled and push triggers were removed because the
+  # job is blocked by a Cloudflare challenge on GitHub-hosted runners.
   workflow_dispatch:
-  
-  schedule:
-  - cron: "0 0 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
