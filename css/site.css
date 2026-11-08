@@ -290,6 +290,11 @@ main {
   margin-bottom: 14px;
 }
 
+/* Panels without a section head: keep the heading clear of the content under it. */
+.panel > h2 {
+  margin-bottom: 16px;
+}
+
 .hint {
   color: var(--ink-muted);
   font-size: 0.92rem;
@@ -547,6 +552,60 @@ tfoot th {
   text-align-last: left;
 }
 
+.champ-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.champ-field .form-select {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.champ-icon {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--surface-sunken);
+  box-shadow: 0 0 0 1px var(--line-strong);
+}
+
+/* An empty slot keeps its width, so the select does not move when a champion is picked. */
+.champ-icon:not([src]) {
+  visibility: hidden;
+}
+
+/* Narrow screens: the icon sits above the select so the champion name keeps its width. */
+@media (max-width: 767.98px) {
+  .champ-field {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+
+  .champ-icon {
+    width: 24px;
+    height: 24px;
+    align-self: flex-start;
+  }
+}
+
+/* Tablet board: the selects are narrower than on desktop, so the icon is a little smaller. */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .champ-field {
+    gap: 6px;
+  }
+
+  .champ-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .diff {
   font-variant-numeric: tabular-nums;
   font-weight: 600;
@@ -578,7 +637,7 @@ tfoot th {
 
 .side {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   padding: 14px 16px;
   background: var(--surface-sunken);
   border-radius: var(--radius-md);
@@ -705,7 +764,9 @@ td.picked {
 /* Suggestions */
 
 .pick-chip {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   width: 100%;
   padding: 4px 6px;
   font: inherit;
@@ -731,7 +792,7 @@ td.picked {
 
 .suggestions-table th,
 .suggestions-table td {
-  padding: 4px 2px;
+  padding: 4px 5px;
   font-size: 0.82rem;
   line-height: 1.25;
 }
@@ -748,9 +809,23 @@ td.picked {
   }
 }
 
-.suggestions-table td:nth-child(even) {
+.suggestions-table .suggestion-label {
   color: var(--ink-muted);
   font-size: 0.85rem;
+}
+
+/* Spacer between the two teams. Its width is fixed, so the team columns line up. */
+.suggestions-table .team-gap {
+  width: 16px;
+  min-width: 16px;
+  padding: 0;
+}
+
+.suggestions-table .champ-icon {
+  width: 18px;
+  height: 18px;
+  flex-basis: 18px;
+  border-radius: 3px;
 }
 
 /* Footer */

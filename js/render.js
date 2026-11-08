@@ -9,11 +9,13 @@ const STATE_CLASSES = ['winner', 'loser', '50'];
 const PHASES = ['early', 'mid', 'late'];
 const TOP_N = 5;
 const MODEL_NAMES = { heuristic: 'Heuristic', learned: 'Learned' };
+const SUGGESTION_ICON_PX = 18;
 
 let chart = null;
 let lastAnalysis = null;
 
 const byId = (id) => document.getElementById(id);
+const classNames = (...names) => names.filter(Boolean).join(' ');
 
 function cell(tag, { text, className, attrs = {} } = {}) {
   const node = document.createElement(tag);
@@ -39,6 +41,19 @@ function appendLabel(node, label) {
     });
   });
   return node;
+}
+
+/** Decorative champion icon. It is removed if the image fails, so the name stays on its own. */
+function championIcon(url, size) {
+  const img = document.createElement('img');
+  img.className = 'champ-icon';
+  img.alt = '';
+  img.width = size;
+  img.height = size;
+  img.decoding = 'async';
+  img.src = url;
+  img.addEventListener('error', () => img.remove());
+  return img;
 }
 
 function setDiff(id, value) {
@@ -78,34 +93,67 @@ export function renderStatus(calc, status) {
 }
 
 /**
- * Suggestion table. Cell order and classes match the old page.
- * @param {{ ranked: Array<Record<string, Array<[string, number, string]>>>, showScores: boolean,
- *   pickedNames: Set<string> }} args
+ * Board icon beside each champion select. The slot keeps its width when a champion is
+ * missing, so the selects do not move.
+ * @param {Map<string, string>} icons champion tag -> icon URL
  */
-export function renderSuggestions({ ranked, showScores, pickedNames }) {
+export function renderBoardIcons(icons) {
+  for (const select of document.querySelectorAll('select.select_champion')) {
+    const img = select.closest('.champ-field').querySelector('.champ-icon');
+    const url = icons.get(select.value);
+    if (!url) {
+      img.removeAttribute('src');
+    } else if (img.getAttribute('src') !== url) {
+      img.onerror = () => img.removeAttribute('src');
+      img.src = url;
+    }
+  }
+}
+
+/** 'picked' wins over 'open', which marks the top five per role. */
+function suggestionState(name, rowIndex, pickedNames) {
+  if (pickedNames.has(name)) return 'picked';
+  return rowIndex < TOP_N ? 'open' : '';
+}
+
+function pickChip(name, team, role, icons) {
+  const pick = cell('button', {
+    text: name,
+    className: 'pick-chip',
+    attrs: { type: 'button', 'data-tag': tagFor(name), 'data-team': team, 'data-role': role },
+  });
+  const url = icons.get(tagFor(name));
+  if (url) pick.prepend(championIcon(url, SUGGESTION_ICON_PX));
+  return pick;
+}
+
+/**
+ * Suggestion table. Cell order and state classes match the old page. A spacer column
+ * separates the two teams, and labels and scores carry their own classes.
+ * @param {{ ranked: Array<Record<string, Array<[string, number, string]>>>, showScores: boolean,
+ *   pickedNames: Set<string>, icons: Map<string, string> }} args
+ */
+export function renderSuggestions({ ranked, showScores, pickedNames, icons }) {
   const maxRows = Math.max(0, ...ROLES_LONG.flatMap((role) => [ranked[0][role].length, ranked[1][role].length]));
   const rows = [];
 
   for (let i = 0; i < maxRows; i += 1) {
     const row = document.createElement('tr');
     for (let team = 0; team < 2; team += 1) {
+      if (team === 1) row.append(cell('td', { className: 'team-gap', attrs: { 'aria-hidden': 'true' } }));
       for (const role of ROLES_LONG) {
         const list = ranked[team][role];
         if (list.length > i) {
           const [name, score, label] = list[i];
-          let className = '';
-          if (pickedNames.has(name)) className = 'picked';
-          else if (i < TOP_N) className = 'open';
-          const pick = cell('button', {
-            text: name,
-            className: 'pick-chip',
-            attrs: { type: 'button', 'data-tag': tagFor(name), 'data-team': team, 'data-role': longToShort(role) },
+          const state = suggestionState(name, i, pickedNames);
+          const nameCell = cell('td', {
+            className: classNames(state, 'suggestion-name'),
+            attrs: { colspan: showScores ? 1 : 2 },
           });
-          const nameCell = cell('td', { className, attrs: { colspan: showScores ? 1 : 2 } });
-          nameCell.append(pick);
+          nameCell.append(pickChip(name, team, longToShort(role), icons));
           row.append(nameCell);
-          row.append(appendLabel(cell('td', { className }), label));
-          if (showScores) row.append(cell('td', { text: score.toFixed(2) }));
+          row.append(appendLabel(cell('td', { className: classNames(state, 'suggestion-label') }), label));
+          if (showScores) row.append(cell('td', { text: score.toFixed(2), className: 'suggestion-score' }));
         }
         if (list.length === i) {
           row.append(cell('td', { attrs: { colspan: 3, rowspan: maxRows - list.length } }));
