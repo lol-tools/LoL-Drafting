@@ -2,6 +2,7 @@
 // Predictions come from js/model.js and are unchanged. Learned weights are reported only.
 
 import { loadChampionTables, parseTeamFile } from './data.js';
+import { loadChampionIcons } from './icons.js';
 import { loadWeights } from './weights.js';
 import {
   ROLES_SHORT,
@@ -16,6 +17,7 @@ import {
 } from './model.js';
 import {
   renderAnalysis,
+  renderBoardIcons,
   renderDiffs,
   renderModelStatus,
   renderStatus,
@@ -32,6 +34,7 @@ const state = {
   tables: null, // from loadChampionTables()
   teams: [{}, {}], // role -> champion row, or the empty placeholder row
   comfort: [{}, {}], // per team: player -> champion -> comfort value, from that team's file
+  icons: new Map(), // champion tag -> icon URL, empty until Data Dragon answers
 };
 
 function championSelects() {
@@ -56,12 +59,13 @@ function pickedNames() {
 
 function refresh() {
   const { championData, roleFilter } = state.tables;
+  renderBoardIcons(state.icons);
   renderDiffs(scalingDiffs(state.teams));
 
   const compTeams = TEAMS.map((team) => pickedRows(state.teams[team]));
   const compType = byId('comp_type').value;
   const ranked = rankSuggestions(buildSuggestions({ championData, compTeams, roleFilter, compType }));
-  renderSuggestions({ ranked, showScores: byId('math').checked, pickedNames: pickedNames() });
+  renderSuggestions({ ranked, showScores: byId('math').checked, pickedNames: pickedNames(), icons: state.icons });
 
   renderAnalysis(analysisData(compTeams[0], compTeams[1]));
   const { calc, winner } = predictWinner(compTeams[0], compTeams[1]);
@@ -167,6 +171,7 @@ function bindControls() {
 
 async function init() {
   const weights = loadWeights();
+  const iconsReady = loadChampionIcons();
   setBusy(true, 'Loading champion data');
   try {
     state.tables = await loadChampionTables();
@@ -176,6 +181,11 @@ async function init() {
     populateChampionSelects(state.tables.options);
     bindControls();
     refresh();
+    // Icons are decoration: the page draws first, then the icons appear when Data Dragon answers.
+    iconsReady.then((icons) => {
+      state.icons = icons;
+      refresh();
+    });
   } catch (error) {
     console.error(error);
     showError(`Champion data failed to load: ${error.message}`);
